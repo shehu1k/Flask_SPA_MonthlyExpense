@@ -1,7 +1,6 @@
 from flask import Flask, render_template,make_response
 from flask import request,jsonify
 from exp_calc import MyExcelfile
-import pandas as pd
 # from dataentry import get_amount,get_category,get_date,get_description
 
 
