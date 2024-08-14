@@ -1,6 +1,7 @@
 from flask import Flask, render_template,make_response
 from flask import request,jsonify
 from exp_calc import MyExcelfile
+import os
 # from dataentry import get_amount,get_category,get_date,get_description
 
 
@@ -55,5 +56,6 @@ def transaction_summary():
 
 
 if __name__ == "__main__":
-    app.run()
+    port = int(os.getenv('PORT', 5000))
+    app.run(host='0.0.0.0', port=port)
     
